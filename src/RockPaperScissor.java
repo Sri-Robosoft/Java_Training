@@ -19,7 +19,7 @@ public class RockPaperScissor {
             String compChoice = choices[randomNum];
 
             System.out.println("Enter your choice: ");
-            String userChoice = sc.nextLine();
+            String userChoice = sc.next();
 
             if(compChoice.equals((userChoice))) {
                 System.out.println("Draw");
@@ -32,9 +32,13 @@ public class RockPaperScissor {
                 compScore++;
             } else {
                 System.out.println("Please enter the correct choice");
+                System.out.println("****************");
+                continue;
             }
             i++;
         }
+
+        System.out.println("****************");
 
         if(userScore > compScore) {
             System.out.println("User won the game:" +userScore);

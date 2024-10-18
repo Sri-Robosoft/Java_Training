@@ -1,6 +1,5 @@
 public class JavaDataTypes {
     public static void main(String[] args) {
-
         String firstName = "Jeevan";
         String lastName = "Jain";
         int age = 70;
