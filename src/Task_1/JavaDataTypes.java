@@ -1,3 +1,5 @@
+package Task_1;
+
 public class JavaDataTypes {
     public static void main(String[] args) {
         String firstName = "Jeevan";
@@ -7,12 +9,13 @@ public class JavaDataTypes {
         double weight = 50.443;
         boolean isEmployed = true;
         String[] skills = {"Java", "JavaScript", "SQL"};
+        String space = " ";
 
-        String fullName = "Mr. " +firstName+ " " +lastName;
+        String fullName = "Mr. " +firstName+space+lastName;
         System.out.println("Original Name is : " +firstName);
         System.out.println("Full Name is : " +fullName);
 
-        long ageInSeconds = age * (365L*24*60*60);
+        long ageInSeconds = age*(365L*24*60*60);
         System.out.println("Age in seconds : " +ageInSeconds);
 
         int numberOfSkills = skills.length;
