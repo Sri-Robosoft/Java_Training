@@ -5,9 +5,7 @@ public class AddAndSub extends Calculator {
         return a+b+c;
     }
 
-    @Override
     public int sub(int a, int b) {
-        System.out.println("Overriding");
         return b-a;
     }
 }
