@@ -11,11 +11,6 @@ public class Token {
         isTokenActive = tokenActive;
     }
 
-    public void resetToken() {
-        this.isTokenActive = true;
-    }
-
-
     @Override
     public String toString() {
         return isTokenActive ? "Active" : "Inactive";

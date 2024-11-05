@@ -15,5 +15,8 @@ public class Problem4 {
         p.resetTokens();
         p.showTokens();
 
+        p.setTokensInactive(2);
+        p.showTokens();
+
     }
 }

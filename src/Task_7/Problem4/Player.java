@@ -7,7 +7,8 @@ public class Player {
 
     public void createTokenList(int noOfTokens) {
         for(int i=0;i<noOfTokens;i++) {
-            tokenList.add(new Token());
+            Token t = new Token();
+            tokenList.add(t);
         }
     }
 
@@ -20,10 +21,12 @@ public class Player {
     }
 
     public void resetTokens() {
-        for(Token t: tokenList) {
-            t.resetToken();
-        }
+//        for(Token t: tokenList) {
+//            t.resetToken();
+//        }
+        tokenList.forEach(t->t.setTokenActive(true));
     }
+
 
 
 }
