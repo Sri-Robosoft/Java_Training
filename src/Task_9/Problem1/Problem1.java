@@ -10,6 +10,7 @@ public class Problem1 {
 //            fo.renameFile("fileTest.txt");
 //            fo.countOfWords();
 //            fo.copyToBackup();
+            fo.deleteFiles();
         }
         catch (Exception e) {
             System.out.println(e.getMessage());

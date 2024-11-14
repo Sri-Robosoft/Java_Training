@@ -21,10 +21,10 @@ public class FileOperations {
     public void createOrUpdateFile() throws IOException {
         if(file1.createNewFile()) {
             System.out.println("File is created: " +file1.getName());
-            writeToFile("Hi Hello");
+            writeToFile("New File Created");
 
         } else {
-            writeToFile("Hey How are you?");
+            writeToFile("File already exists");
         }
     }
 
@@ -62,10 +62,10 @@ public class FileOperations {
 
     public void copyToBackup() throws IOException{
         boolean success = file4.createNewFile();
-        BufferedWriter br = new BufferedWriter(new FileWriter(file4));
         if(success) {
-            BufferedReader input1 = new BufferedReader(new FileReader("fileTest.txt"));
             String str;
+            BufferedWriter br = new BufferedWriter(new FileWriter(file4));
+            BufferedReader input1 = new BufferedReader(new FileReader("fileTest.txt"));
             while ((str = input1.readLine()) != null) {
                 br.write(str);
                 br.newLine();
@@ -73,8 +73,22 @@ public class FileOperations {
             BufferedReader input2 = new BufferedReader(new FileReader("wordcount.txt"));
             while ((str = input2.readLine()) != null) {
                 br.write(str);
+                br.newLine();
             }
             br.close();
         }
     }
+
+    public void deleteFiles() {
+        File file1 = new File("fileTest.txt");
+        File file2 = new File("wordcount.txt");
+
+        if (file1.delete() && file2.delete()) {
+            System.out.println("Files deleted successfully");
+        }
+        else {
+            System.out.println("Failed to delete the files");
+        }
+    }
+
 }
